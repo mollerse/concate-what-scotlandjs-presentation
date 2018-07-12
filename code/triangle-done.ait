@@ -1,0 +1,61 @@
+W: canvasWidth ;
+H: canvasHeight ;
+
+triangle:
+  beginPath
+  [ 0 -200 ] moveTo
+  [ 200 200 ] lineTo
+  [ -200 200 ] lineTo
+  closePath
+  stroke ;
+
+scaleXY: dup scale ;
+hsl: "hsl(%s, 100%, 50%)" replace ;
+
+"#333" fillStyle
+[0 0] 500 500 fillRect
+8 globalAlpha
+250 250 translate
+41
+[
+  260 360 160 / _i * - hsl
+  dup
+  strokeStyle
+  shadowColor
+  "lighter" globalCompositeOperation
+  5 shadowBlur
+  [1 2 3 4]
+  [
+    0.8 * lineWidth
+    triangle
+  ]
+  step
+  0 150 translate
+  0.9 scaleXY
+  0 -150 translate
+]
+times
+glitch
+
+sliceHeight: 2 ;
+slices: H sliceHeight / floor ;
+point: [] cons cons ;
+randomPoint: -10 10 random2 0 point ;
+
+glitch:
+  [0 0] W H getImageData
+  slices
+  [
+    random 0.8 >
+    [
+      dup
+      randomPoint
+      0 _i sliceHeight * point
+      W
+      sliceHeight
+      putImageData
+    ]
+    cond
+  ]
+  times
+  pop ;

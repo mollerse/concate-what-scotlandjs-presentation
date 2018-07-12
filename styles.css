@@ -1,0 +1,114 @@
+.spectacle-content.default-slide:first-child {
+  max-width: 100vw;
+  max-height: 100vh;
+}
+
+.spectacle-content.default-slide {
+}
+
+.default-slide span,
+.default-slide p,
+.default-slide code {
+  color: #fff !important;
+}
+
+code {
+  padding: 20px 20px !important;
+}
+
+p {
+  margin: 0.5em auto !important;
+  font-family: sans-serif !important;
+  font-size: 150% !important;
+}
+
+ul {
+  list-style: none !important;
+}
+
+li {
+  font-size: 70% !important;
+}
+
+.flip {
+  transform: rotate(180deg);
+}
+
+a,
+a:visited {
+  color: #fff !important;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+blockquote {
+}
+
+.small-text {
+  font-size: 50% !important;
+}
+
+blockquote > span {
+  font-size: 200% !important;
+  color: #fff !important;
+  border-color: #fff !important;
+}
+
+.ReactCodeMirror,
+.CodeMirror {
+  height: 700px !important;
+}
+
+.repl-slide {
+  max-width: 1500px !important;
+}
+
+.repl {
+  text-align: initial;
+  display: flex;
+  font-size: 0.75em !important;
+  justify-content: space-between;
+}
+
+.input {
+  width: 55%;
+  border: 1px solid white;
+}
+
+.output {
+  margin: 0 auto;
+  color: #fff;
+  font-size: 2rem;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+}
+
+.output canvas {
+  width: 500px;
+  height: 500px;
+  margin: auto 0;
+  border: 1px solid white;
+}
+
+.output div:first-child {
+  font-size: 3rem;
+}
+
+.stack {
+  width: 100%;
+  margin: 0;
+  list-style: none;
+  padding: 0 1em;
+  text-align: center;
+}
+
+.stack li {
+  border: 4px dotted #fff;
+  background: #151718;
+  color: #fff;
+  width: 100%;
+  line-height: 2em;
+}
